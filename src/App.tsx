@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -10,19 +11,30 @@ import Footer from '@/components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Courses />
-        <Facilities />
-        <Team />
-        <Gallery />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-white flex flex-col">
+        {/* Navbar hamesha har page par nazar aayega */}
+        <Navbar />
+        
+        <main className="flex-grow">
+          <Routes>
+            {/* Home Page (Sirf Hero yahan hoga) */}
+            <Route path="/" element={<Hero />} />
+            
+            {/* Baqi Pages */}
+            <Route path="/about" element={<About />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/facilities" element={<Facilities />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+
+        {/* Footer hamesha har page ke neeche nazar aayega */}
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

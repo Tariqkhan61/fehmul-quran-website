@@ -78,13 +78,13 @@ export const COURSES: Course[] = [
 ];
 
 export const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Courses', href: '#courses' },
-  { label: 'Facilities', href: '#facilities' },
-  { label: 'Our Team', href: '#team' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Courses', href: '/courses' },
+  { label: 'Facilities', href: '/facilities' },
+  { label: 'Our Team', href: '/team' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Contact Us', href: '/contact' },
 ];
 
 export const GALLERY_IMAGES = [
